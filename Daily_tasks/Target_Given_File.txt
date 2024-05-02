@@ -1,0 +1,1 @@
+Given I open the browser enter the url "https://www.google.com"

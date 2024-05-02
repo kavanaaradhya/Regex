@@ -1,0 +1,45 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table with Three Columns</title>
+<style>
+    /* Some basic styling for demonstration */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .matched { background-color: lightgreen; }
+    .not-matched { background-color: lightcoral; }
+</style>
+</head>
+<body>
+
+<h2>Comparison of contents</h2>
+
+<table>
+    <tr>
+        <th>Source Step</th>
+        <th>Predefined Step</th>
+        <th>Status</th>
+    </tr>
+<tr class="not-matched"><td>  I  the browser enter the url "https://www.google.com"</td><td>The given source step is not matched with any of predefined steps</td><td>Not Matched</td></tr>
+<tr class="not-matched"><td>   click on Search button</td><td>The given source step is not matched with any of predefined steps</td><td>Not Matched</td></tr>
+<tr class="matched"><td>  I expect to see Homepage</td><td>  I expect to see Homepage</td><td>Matched</td></tr>
+<tr class="matched"><td>  I open the browser enter the url "https://www.google.com"</td><td>  I open the browser enter the url "https://www.google.com"</td><td>Matched</td></tr>
+<tr class="not-matched"><td>   click on Search button</td><td>The given source step is not matched with any of predefined steps</td><td>Not Matched</td></tr>
+<tr class="matched"><td>  I expect to see Homepage</td><td>  I expect to see Homepage</td><td>Matched</td></tr>
+</table>
+
+</body>
+</html>
+</html>

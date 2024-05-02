@@ -1,0 +1,17 @@
+Given I open the browser enter the url "https://www.google.com"
+When  click on Search button
+Then I expect to see Homepage
+Given I open the browser enter the url "https://www.google.com"
+When  click on Search button
+Then I expect to see Homepage
+
+
+
+
+
+
+
+
+
+
+

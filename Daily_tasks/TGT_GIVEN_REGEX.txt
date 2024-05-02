@@ -1,0 +1,1 @@
+Given I open the "((((https?)://)|)([-%()_.!~*';\?:&=+$,A-Za-z0-9])+)(?:com|in|org)"
