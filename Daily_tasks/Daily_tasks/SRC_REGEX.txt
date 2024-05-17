@@ -1,0 +1,121 @@
+Scenario : Verify the Components under the Unordered reading list detail screen
+
+Given I launch the app
+And I am on "Home" screen
+When I scroll to "READING GUIDES FOR YOU" "Carousel"
+And I tap on see all button for "READING GUIDES FOR YOU"
+And I see reading list details is "unordered"
+And I view the "ALL ISSUES" tab
+Then I see the content for "ALL ISSUES" tab for reading list
+And I expect to see the list module to view all the contents within the reading list
+And I expect to see component "unorderedThumbnailImageView"
+And I expect to see component "unorderedTitle"
+And I expect to see component "unorderedMetaDataTag"
+And I expect to see component "unorderedDetailTag"
+And I expect to see component "unorderedOverflowButton"
+And I check if new icon component is available
+       
+Scenario : Verify the hero components in the ordered reading list
+
+Given I launch the app
+And I am on "Home" screen
+When I scroll to "EVENT READING GUIDES" "Carousel"
+And I tap on see all button for "EVENT READING GUIDES"
+And I see reading list details is "ordered"
+When I am viewing the "Hero card" in list
+Then I expect to see the hero component "heroCardImage"
+And I expect to see the hero component "heroCardTitle"
+And I expect to see the hero component "heroCardcategory"
+
+Scenario : Verify article page Hype Box
+
+Given I open the Marvel path "/articles"
+When I click on the element "{{headerline in latest comics news}} {{position one}}"
+And I wait on element "{{hype box}}" for 10000ms to be displayed
+Then I expect that element "{{column thumb box}}" does appear exactly 5 times
+And I expect that element "{{column unlinked}}" does appear exactly 5 times
+And I expect that element "{{column headline}}" does appear exactly 5 times
+
+Scenario : Verify Browse by Creator - On scrolling down to featured creators component and clicking on card it redirects correctly
+
+Given I open the Marvel path "/comics/creators"
+And I scroll to element "{{featured creators section}}"
+When I click on a random item from the list "{{images text in featured creators}}" and store the text
+Then I expect the url contains part of the stored text
+And I expect the url matches the regular expression "http(s)?://(www|staging)\.marvel\.com\/comics/creators/\d{1,5}.*$"
+
+Scenario : Verify clicking on 'Marvel Unlimited' checkbox works
+
+Given I open the Marvel path "/comics/characters/1011223/skaar"
+When I scroll to element "{{sort and filter dropdown}}"
+And I store the element's "{{showing results value}}" text
+And I click on the element "{{marvel unlimited checkBox}}"
+And I wait on element "{{filter active link}}" to be displayed
+Then I expect that element "{{filter active link}}" is displayed
+And I expect that the elements "{{filter card images}}" are displayed
+And I expect that element "{{showing results value}}" text not to equal the stored text
+And I expect that element "{{marvel unlimited badge}}" is displayed
+
+Scenario : Verify characters explore comic events card
+
+Given I open the Marvel path "/characters"
+When I scroll to element "{{featured characters section}}"
+And I click on the element "{{featured characters section}} {{first card}}"
+Then I expect the url matches the regular expression "http(s)?://(www|staging)\.marvel\.com\/characters\/.*$"
+
+Scenario : Verify characters explore comic events card
+
+Given I open the Marvel path "/explore"
+And I store the element's "{{first card in Comic}}" position
+And I scroll to element "{{first card in Comic}}"
+When I move to element "{{first card in Comic}}"
+Then I expect that element's "{{first card in Comic}}" position is not equal to the stored position
+
+Scenario : Verify clicking on 'Back To Series' link redirects to series page
+
+Given I open the Marvel path "/comics/issue/36330/uncanny_x-men_1963_541"
+And I wait on element "{{back to series}}" for 10000ms to be displayed
+When I click on the element "{{back to series}}"
+Then I expect url matches the regular expression "https://(www|staging).marvel.com/comics/series.*$"
+And I expect that element "{{cards section in x-men page}}" becomes displayed
+
+Scenario :To verify Browse by Creator - Featured Creators card click
+
+Given I launch the URL "https://www.marvel.com/comics/creators"
+And I scroll down to FEATURED CREATORS component
+When I click on cards under Featured Characters
+Then I expect to redirect to Comics by Creator detail pages
+
+Scenario :To verify Comics by Character Detail Page - Marvel Unlimited checkbox
+
+Given I open the URL "https://www.marvel.com/comics/characters/1009610/spider-man"
+When I Click on the Marvel Unlimited checkbox 
+Then I expect to see only books that are available in Marvel Unlimited
+
+Scenario : To verify featured items redirecting to details page
+
+Given I open the URL "https://marvel.com/characters"
+When I navigate to the Characters page
+And I Spot click cards in the featured item's component
+Then I expect the system should redirect to item detail pages
+
+Scenario :To Verify Characters Explore Comic Events
+
+Given I open the URL "https://marvel.com"
+When I click on Explore All from Characters top nav
+And I navigate to the Characters Explore All page
+And I Hover over cards under the Comic Events component
+Then I expect to see Cards under Comic Events should have a hover state
+And I expect to see the card slightly raises on mouse hover
+
+Scenario : To verify Comics Issue Detail Page - Back to Series link
+
+Given I open the URL "https://www.marvel.com/comics/issue/36330/uncanny_x-men_1963_541"
+When I click on the Back to Series Link
+Then I expect to see the Back to Series link should redirect to the Series detail page
+
+Scenario : To verify url, email, phone number regex
+
+Given I open the site "https://www.google.com"
+When I enter the email "abc@gmail.com"
+And I enter the phone number "9876543456"
