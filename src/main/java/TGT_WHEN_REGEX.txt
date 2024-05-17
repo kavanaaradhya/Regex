@@ -1,0 +1,66 @@
+And I am on "([^"]*)?" screen
+When I scroll to "([^"]*)?" "([^"]*)?"
+And I tap on see all button for "([^"]*)?"
+And I see reading list details is "([^"]*)?"
+And I view the "([^"]*)?" tab
+And I expect to see the list module to view all the contents within the reading list
+And I expect to see component "([^"]*)?"
+And I expect to see component "([^"]*)?"
+And I expect to see component "([^"]*)?"
+And I expect to see component "([^"]*)?"
+And I expect to see component "([^"]*)?"
+And I check if new icon component is available
+
+And I am on "([^"]*)?" screen
+When I scroll to "([^"]*)?" "([^"]*)?"
+And I tap on see all button for "([^"]*)?"
+And I see reading list details is "([^"]*)?"
+When I am viewing the "([^"]*)?" in list
+And I expect to see the hero component "([^"]*)?"
+And I expect to see the hero component "([^"]*)?"
+
+When I click on the element "([^"]*)?"
+And I wait on element "([^"]*)?" for 10000ms to be displayed
+And I expect that element "([^"]*)?" does appear exactly 5 times
+And I expect that element "([^"]*)?" does appear exactly 5 times
+
+And I scroll to element "([^"]*)?"
+When I click on a random item from the list "([^"]*)?" and store the text
+And I expect the url matches the regular expression "http\(s\)\?://\(www\|staging\)\\\.marvel\\\.com\\/comics/creators/\\d\{1,5\}\.\*\$"
+
+When I scroll to element "([^"]*)?"
+And I store the element's "([^"]*)?" text
+And I click on the element "([^"]*)?"
+And I wait on element "([^"]*)?" to be displayed
+And I expect that the elements "([^"]*)?" are displayed
+And I expect that element "([^"]*)?" text not to equal the stored text
+And I expect that element "([^"]*)?" is displayed
+
+When I scroll to element "([^"]*)?"
+And I click on the element "([^"]*)?"
+
+And I store the element's "([^"]*)?" position
+And I scroll to element "([^"]*)?"
+When I move to element "([^"]*)?"
+
+And I wait on element "([^"]*)?" for 10000ms to be displayed
+When I click on the element "([^"]*)?"
+And I expect that element "([^"]*)?" becomes displayed
+
+And I scroll down to FEATURED CREATORS component
+When I click on cards under Featured Characters
+
+When I Click on the Marvel Unlimited checkbox 
+
+When I navigate to the Characters page
+And I Spot click cards in the featured item's component
+
+When I click on Explore All from Characters top nav
+And I navigate to the Characters Explore All page
+And I Hover over cards under the Comic Events component
+And I expect to see the card slightly raises on mouse hover
+
+When I click on the Back to Series Link
+
+When I enter the email "[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}"
+And I enter the phone number "(\d{10})"

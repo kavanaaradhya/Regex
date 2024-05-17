@@ -1,0 +1,9 @@
+Given I launch the app
+
+Given I open the Marvel path "([^"]*)?"
+
+Given I launch the URL "((((https?|ftps?|gopher|telnet|nntp)://)|(mailto:|news:))([-%()_.!~*';/?:@&=+$,A-Za-z0-9])+)"
+
+Given I open the URL "((((https?|ftps?|gopher|telnet|nntp)://)|(mailto:|news:))([-%()_.!~*';/?:@&=+$,A-Za-z0-9])+)"
+
+Given I open the site "((((https?)://)|)([-%()_.!~*';\?:@&=+$,A-Za-z0-9])+)(?:com|in|org)"

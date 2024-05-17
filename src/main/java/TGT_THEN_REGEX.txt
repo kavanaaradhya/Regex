@@ -1,0 +1,24 @@
+Then I see the content for "([^"]*)?" tab for reading list
+
+Then I expect to see the hero component "([^"]*)?"
+
+Then I expect that element "([^"]*)?" does appear exactly 5 times
+
+Then I expect the url contains part of the stored text
+
+Then I expect that element "([^"]*)?" is displayed
+
+
+Then I expect that element's "([^"]*)?" position is not equal to the stored position
+
+Then I expect url matches the regular expression "https://(www|staging).marvel.com/comics/series.*$"
+
+Then I expect to redirect to Comics by Creator detail pages
+
+Then I expect to see only books that are available in Marvel Unlimited
+
+Then I expect the system should redirect to item detail pages
+
+Then I expect to see Cards under Comic Events should have a hover state
+
+Then I expect to see the Back to Series link should redirect to the Series detail page
